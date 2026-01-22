@@ -1,47 +1,47 @@
 "use client";
 
-import { useState } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Sidebar from "./Header/Sidebar";
-import HamburgerButton from "./Header/HamburgerButton";
-import SearchButton from "./Header/SearchButton";
-import SearchDropdown from "./Header/SearchDropdown";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Sidebar from "./Sidebar";
+import HamburgerButton from "./HamburgerButton";
+import SearchButton from "./SearchButton";
+import SearchDropdown from "./SearchDropdown";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "News", href: "/news" },
-  { label: "Politics", href: "/politics" },
-  { label: "Business", href: "/business" },
-  { label: "National", href: "/national" },
-  { label: "Culture", href: "/culture" },
-  { label: "Opinion", href: "/opinion" },
-  { label: "Lifestyle", href: "/lifestyle" },
-  { label: "Sports", href: "/sports" },
-];
+  const navItems = [
+    { label: "HOME", href: "/" },
+    { label: "NEWS", href: "/news" },
+    { label: "POLITICS", href: "/politics" },
+    { label: "BUSINESS", href: "/business" },
+    { label: "NATIONAL", href: "/national" },
+    { label: "CULTURE", href: "/culture" },
+    { label: "OPINION", href: "/opinion" },
+    { label: "LIFESTYLE", href: "/lifestyle" },
+    { label: "SPORTS", href: "/sports" },
+  ];
 
   return (
     <>
-      <header className="bg-white">
+      <header className="bg-white border-b border-gray-200">
         {/* Mobile Header - Shows on small screens */}
-        <div className="lg:hidden">
-          <div className="w-full mx-auto flex items-center justify-between px-[15px] h-[60px]">
+        <div className="md:hidden">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-black">
             {/* Hamburger Menu Button */}
-            <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} variant="mobile" />
+            <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} />
 
             {/* Centered Logo */}
             <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
               <Image 
                 src="/logo_mobile.png" 
                 alt="The Downtown" 
-                width={115} 
-                height={32}
+                width={150} 
+                height={20}
                 priority
               />
             </Link>
@@ -54,8 +54,8 @@ const navItems = [
           </div>
         </div>
 
-        {/* Desktop Header - Shows on large screens and up */}
-        <div className="hidden lg:block">
+        {/* Desktop Header - Shows on medium screens and up */}
+        <div className="hidden md:block">
           {/* Logo Section - Top */}
           <div className="border-b border-black h-[90px]">
             <div className="w-full h-full flex items-center justify-center px-2">
@@ -72,14 +72,14 @@ const navItems = [
           </div>
 
           {/* Navigation Section with Hamburger and Search - Bottom */}
-          <nav className="">
-            <div className="px-4">
+          <nav className="bg-white">
+            <div className="px-2">
               <div className="flex items-center justify-between py-2">
                 {/* Hamburger Menu Button */}
                 <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} />
 
                 {/* Navigation Links - Centered */}
-                <ul className="flex items-center justify-center md:space-x-[22px] flex-1">
+                <ul className="flex items-center justify-center space-x-4 md:space-x-6 lg:space-x-8 flex-1">
                   {navItems.map((item) => (
                     <li key={item.label}>
                       <Link
