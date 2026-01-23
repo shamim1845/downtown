@@ -1,4 +1,6 @@
-import { Search, X } from "lucide-react";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface SearchButtonProps {
   isOpen: boolean;
@@ -12,7 +14,7 @@ export default function SearchButton({ isOpen, onClick }: SearchButtonProps) {
       className="rounded transition-colors flex-shrink-0 cursor-pointer z-50"
       aria-label="Search"
     >
-      {isOpen ? <X size={18}/> : <Search size={18} />}
+      {isOpen ? <FontAwesomeIcon icon={faXmark} size="lg" /> : <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />}
     </button>
   );
 }

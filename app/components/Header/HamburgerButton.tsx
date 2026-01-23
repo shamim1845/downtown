@@ -1,4 +1,5 @@
-import { Menu } from "lucide-react";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface HamburgerButtonProps {
   onClick: () => void;
@@ -16,8 +17,8 @@ export default function HamburgerButton({
       aria-label="Open menu"
     >
       {variant === "mobile" ? (
-        // Mobile: Use lucid icon
-        <Menu size={22} />
+        // Mobile: Use fontawesome icon
+        <FontAwesomeIcon icon={faBars} size="xl" />
       ) : (
         // Desktop: Use custom CSS hamburger
         <div className="hamburger-menu">
