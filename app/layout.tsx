@@ -1,6 +1,7 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto, Roboto_Condensed } from "next/font/google";
-import "./globals.css";
+import Header from "./components/Header";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -17,7 +18,7 @@ const robotoCondensed = Roboto_Condensed({
 export const metadata: Metadata = {
   title:
     "City News – JNews – Premium News, Blog & Magazine WordPress Theme site",
-  description: "JNews - Premium News, Blog & Magazine WordPress Theme site",
+  description: "Downtown - Modern News Magazine",
 };
 
 export default function RootLayout({
@@ -30,6 +31,8 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${robotoCondensed.variable} antialiased `}
       >
+        <Header />
+
         {children}
       </body>
     </html>
