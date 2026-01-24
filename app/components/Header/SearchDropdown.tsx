@@ -32,7 +32,7 @@ export default function SearchDropdown({
             <input
               type="text"
               placeholder="Search..."
-              className="w-full px-4 py-2 pr-12 text-base border border-[#e0e0e0] transition-shadow ease-in-out focus:outline-none focus:shadow-[inset_0_0_15px_0_rgba(0,0,0,0.08)] placeholder:text-gray-500"
+              className="w-full px-4 py-2 pr-12 text-base border border-[#e0e0e0] transition-shadow ease-in-out focus:outline-none shadow-[inset_0_0_15px_0_rgba(0,0,0,0.08)] focus:shadow-none placeholder:text-gray-500"
             />
             <button className="absolute right-5 top-1/2 transform -translate-y-1/2 p-2 hover:bg-gray-100 rounded">
               <FontAwesomeIcon icon={faMagnifyingGlass} size="sm" color="#888" />

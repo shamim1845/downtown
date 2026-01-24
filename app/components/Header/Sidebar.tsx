@@ -83,7 +83,7 @@ export default function Sidebar({ isOpen, onClose, navItems }: SidebarProps) {
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className="block px-5 py-2 font-condensed font-semibold text-[18px] capitalize"
+                    className="block px-5 py-2 text-foreground font-condensed font-semibold text-[18px] capitalize"
                   >
                     {item.label}
                   </Link>
