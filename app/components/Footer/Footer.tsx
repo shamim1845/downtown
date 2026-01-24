@@ -120,7 +120,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="flex flex-col-reverse lg:flex-row justify-between items-start lg:items-center gap-4 text-[12px] text-[#666666]">
                     {/* Copyright */}
-                    <div className="mb-4 lg:mb-0 lg:text-center space-y-1">
+                    <div className="mb-4 lg:mb-0 space-y-1">
                         <p>&copy; 2018 JNews - City News Magazine WordPress theme. All rights belong to their respective owners.</p>
                         <p>JNews is a top selling 2018 WordPress News, Blog, Newspaper & Magazine Theme.</p>
                     </div>
