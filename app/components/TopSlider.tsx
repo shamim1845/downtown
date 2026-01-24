@@ -16,9 +16,9 @@ export default function TopSlider() {
   // Update items per view based on screen size
   useEffect(() => {
     const updateItemsPerView = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 576) {
         setItemsPerView(1); // Mobile: 1 item
-      } else if (window.innerWidth < 1024) {
+      } else if (window.innerWidth < 768) {
         setItemsPerView(2); // Tablet: 2 items
       } else {
         setItemsPerView(3); // Desktop: 3 items

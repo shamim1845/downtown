@@ -25,7 +25,7 @@ export default function Home() {
             <FeaturedArticle />
 
             {/* Secondary Articles Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7">
               {SECONDARY_ARTICLES.map((article) => (
                 <ArticleCard key={article.id} article={article} />
               ))}

@@ -4,7 +4,7 @@ import { CATEGORY_COLORS, RIGHT_SIDEBAR_ARTICLES } from '../constants/news-const
 
 export default function RightSidebar() {
   return (
-    <aside className="flex flex-col gap-7">
+    <aside className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5 md:gap-7">
       {RIGHT_SIDEBAR_ARTICLES.map((article) => (
         <article key={article.id} className="bg-white overflow-hidden antialiased" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.08)' }}>
           {/* Image with Category Badge */}
