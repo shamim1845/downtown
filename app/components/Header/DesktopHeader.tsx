@@ -43,7 +43,7 @@ export default function DesktopHeader({
             {/* Navigation Section with Hamburger and Search - Bottom */}
             <div
                 className={`transition-all duration-100 ease-in-out ${isSticky
-                    ? "fixed top-0 left-0 right-0 z-50 bg-white shadow-md translate-y-0"
+                    ? "fixed top-0 left-0 right-0 z-20 bg-white shadow-md translate-y-0"
                     : "relative translate-y-0"
                     }`}
             >

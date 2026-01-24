@@ -3,8 +3,16 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faMagnifyingGlass, faXmark, faRss } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookF as faFacebookFD,
+  faXTwitter,
+  faYoutube
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faMagnifyingGlass,
+  faXmark,
+  faRss,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -37,7 +45,7 @@ export default function Sidebar({ isOpen, onClose, navItems }: SidebarProps) {
       {/* Cross Button */}
       <button
         onClick={onClose}
-        className={`fixed right-1 top-1 p-2 z-50 rounded transition-all duration-300 ${isOpen ? 'rotate-90 opacity-100 pointer-events-auto' : 'rotate-0 opacity-0 pointer-events-none'
+        className={`fixed right-1 top-1 md:right-3 md:top-3 lg:right-5 lg:top-5 p-2 z-50 rounded transition-all duration-300 ${isOpen ? 'rotate-90 opacity-100 pointer-events-auto' : 'rotate-0 opacity-0 pointer-events-none'
           }`}
         aria-label="Close menu"
       >
@@ -92,7 +100,7 @@ export default function Sidebar({ isOpen, onClose, navItems }: SidebarProps) {
                 className="text-gray-600 hover:text-blue-600 transition-colors"
                 aria-label="Facebook"
               >
-                <FontAwesomeIcon icon={faFacebook} color="#45629f" size="lg" />
+                <FontAwesomeIcon icon={faFacebookFD} color="#45629f" size="lg" />
               </a>
               <a
                 href="#"
